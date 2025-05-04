@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Schema=mongoose.Schema;
 
 const UserSchema = new mongoose.Schema({
     name: {
@@ -17,29 +18,10 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true,
         minlength: 6
-    },
-    expense:[
-        {
-            text:{
-                type:String,
-                required :true
-            },
-            amount:{
-                type:Number,
-                required:true
-            },
-            createdAt:{
-                type:Date,
-                defaut:Date.now
-            }
-        }
-
-    ]
-},
-{
+    }
+}, {
     timestamps: true
-}
-);
+});
 
 const UserModel = mongoose.model('Users', UserSchema);
 
