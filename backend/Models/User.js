@@ -19,6 +19,23 @@ const UserSchema = new mongoose.Schema({
         required: true,
         minlength: 6
     }
+    ,
+    expenses:[
+        {
+            text:{
+                type: String,
+                required:true
+            },
+            amount:{
+                type:Number,
+                required :true
+            },
+            createdAt:{
+                type: Date,
+                default:Date.now()
+            }
+        }
+    ]
 }, {
     timestamps: true
 });
