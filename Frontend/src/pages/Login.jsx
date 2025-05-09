@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { handleError, handleSuccess } from '../Utils';
+import { handleError, handleSuccess } from '../utils';
 
 const Login = () => {
   const [loginInfo, setLoginInfo] = useState({
