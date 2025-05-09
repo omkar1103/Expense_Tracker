@@ -1,11 +1,13 @@
 import React from "react";
 
-function ExpenseTable({ expenses = [] }) {
+function ExpenseTable({ expenses,handleDeleteExpense }) {
   return (
     <div className='expense-list'>
       {expenses?.map((expense, index) => (
         <div key={index} className='expense-item'>
-          <button className='delete-button'>X</button>
+          <button className='delete-button' 
+          onClick={()=>handleDeleteExpense(expense._id)}
+          >X</button>
           <div className='expense-description'>{expense.text}</div>
           <div className='expense-amount'
           style={{
